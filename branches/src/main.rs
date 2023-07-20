@@ -28,4 +28,21 @@ fn main() {
 
     println!("The value of number is: {number}");
 
+    // Commenting this out as it repeats forever
+    //loop {
+    //    println!("Repeat!");
+    //}
+
+    let mut counter = 0;
+
+    let result = loop {
+        counter +=1;
+
+        if counter == 10 {
+            break counter * 2;
+        }
+    };
+
+    println!("the result is {result}.");
+
 }
