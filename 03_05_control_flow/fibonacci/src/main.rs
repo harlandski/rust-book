@@ -4,7 +4,7 @@ fn main() {
     loop {
         println!("Enter n to generate the nth Fibonacci number:");
 
-        let mut sum = 0;
+        let mut sum :u128 = 0;
         let mut n = String::new();
 
         io::stdin().read_line(&mut n).expect("Failed to read line");
