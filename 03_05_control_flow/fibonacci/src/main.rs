@@ -1,27 +1,37 @@
 use std::io;
 
 fn main() {
-loop {
-    
-println!("Enter n to generate the nth Fibonacci number:");
+    loop {
+        println!("Enter n to generate the nth Fibonacci number:");
 
-    let mut n = String::new();
+        let mut sum = 0;
+        let mut n = String::new();
 
-        io::stdin()
-            .read_line(&mut n)
-            .expect("Failed to read line");
+        io::stdin().read_line(&mut n).expect("Failed to read line");
 
-        let n = match n.trim().parse() {
+        let n :u32 = match n.trim().parse() {
             Ok(num) => num,
             Err(_) => continue,
         };
 
-        let mut sum = 1;
-
-        for num in 1..n {
-            sum += num;
+        if n == 1 {
+            println!("0 is the 1 Fibonacci number");
         }
 
+        else if n == 2 {
+            println!("1 is the 2 Fibonacci number");
+        }
+        else {
+            let iterations = n-1;
+            let mut first_number = 0;
+            let mut second_number = 1;
+            for _num in 1..iterations {
+                sum = first_number + second_number;
+                first_number = second_number;
+                second_number = sum;
+            }
         println!("{sum} is the {n} Fibonacci number");
-}
+        }
+
+    }
 }
