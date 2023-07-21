@@ -11,7 +11,7 @@ fn main() {
     "Eight maids a-milking, ",
     "Nine ladies dancing, ",
     "Ten lords a-leaping, ",
-    "Eleven piper piping, ",
+    "Eleven pipers piping, ",
     "Twelve drummers drumming, "];
    
     let mut index = 1;
